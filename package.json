@@ -1,0 +1,31 @@
+{
+  "name": "generator-apigee-deploy-grunt-api",
+  "version": "0.0.1",
+  "description": "Scaffold out an Apigee Node.js API",
+  "license": "BSD",
+  "repository": "https://github.com/dzuluaga/generator-apigee-deploy-grunt-api.git",
+  "author": "Diego Zuluaga",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "web",
+    "apigee",
+    "apigee-deploy-grunt",
+    "apilifecycle",
+    "grunt"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "yeoman-generator": "^0.18.9"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}
