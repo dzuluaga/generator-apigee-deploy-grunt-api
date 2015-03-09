@@ -84,11 +84,11 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   git: function() {
-    this.template('.gitignore', '.gitignore');
+    this.template('gitignore', '.gitignore');
   },
 
   others: function() {
-    this.copy('.travis.yml', '.travis.yml');
+    this.copy('travis.yml', '.travis.yml');
     this.copy('Gruntfile.js', 'Gruntfile.js');
   },
 
