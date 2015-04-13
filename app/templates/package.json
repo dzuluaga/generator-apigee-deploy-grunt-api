@@ -1,6 +1,6 @@
 {
   "name": "<%= apiname %>",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Out of the box I include scaffolding apiproxy, Node.js, and Gruntfile to build your app.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apigeecs/<%= apiname %>"
+    "url": "https://github.com/{org}/<%= apiname %>"
   },
   "keywords": [
     "apigee",
@@ -41,6 +41,7 @@
     "grunt-shell": "^1.1.1",
     "grunt-string-replace": "^1.0.0",
     "grunt-update-submodules": "^0.4.1",
+    "grunt-apigee-kvm": "*",
     "grunt-xmlpoke": "^0.6.0",
     "jshint-stylish": "^0.4.0",
     "load-grunt-config": "^0.12.0",

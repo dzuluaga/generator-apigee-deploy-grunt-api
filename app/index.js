@@ -83,6 +83,10 @@ module.exports = yeoman.generators.Base.extend({
     this.bulkDirectory('tests', 'tests');
   },
 
+  config: function() {
+    this.bulkDirectory('config', 'config');
+  },
+
   git: function() {
     this.template('gitignore', '.gitignore');
   },
