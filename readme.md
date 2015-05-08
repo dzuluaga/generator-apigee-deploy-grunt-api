@@ -1,3 +1,9 @@
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/apigeecs/apigee-deploy-grunt-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+[![NPM](https://nodei.co/npm/generator-apigee-deploy-grunt-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/generator-apigee-deploy-grunt-api/)
+
+[![Build Status](https://travis-ci.org/apigeecs/apigee-deploy-grunt-plugin.svg?branch=master)](https://travis-ci.org/apigeecs/apigee-deploy-grunt-plugin)
+
 API proxy Generator
 =====
 

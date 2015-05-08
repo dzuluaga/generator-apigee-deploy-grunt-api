@@ -183,6 +183,7 @@ module.exports = function(grunt) {
                 }
             },
         },
+		prompt: helper.prompts(grunt)
 // Configure this task to support KVM data config migrations
 /*      "apigee_kvm": {
           "testmyapi-test" : {
@@ -228,7 +229,7 @@ grunt.registerTask('buildApiBundle', 'Build zip without importing it to Edge', [
   	'installNpmRevisionAlias', 'deployApiRevisionAlias', 'executeTests', /*'shell:run_jmeter_tests',*/ 'notify:ApiDeployed']);
 
   //set to DEPLOY_IMPORT_BUMP_SEAMLESS_REVISION by default. This is critical for production for seamless deploymen and not lose traffic
-  grunt.registerTask('default', [ /*'importKVMs',*/'DEPLOY_IMPORT_BUMP_SEAMLESS_REVISION' ]);
+  grunt.registerTask('default', [ 'apigeeGruntPluginBanner', 'prompt',/*'importKVMs',*/'DEPLOY_IMPORT_BUMP_SEAMLESS_REVISION' ]);
 
 	grunt.loadTasks('grunt/tasks');
 	if(grunt.option.flags().indexOf('--help') === -1 && !grunt.option('env')) {
