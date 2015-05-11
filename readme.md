@@ -8,7 +8,7 @@ API proxy Generator
 =====
 
 Yeoman generator that scaffolds API Proxy based on [Apigee Deploy Grunt Plugin](https://github.com/apigeecs/apigee-deploy-grunt-plugin)
-![alt text](https://www.dropbox.com/s/d77nwm3x9h0wj74/1__yo_apigee-deploy-grunt-api__node_.png?dl=1 "yo apigee-deploy-grunt-api")
+![alt text](https://www.dropbox.com/s/6ct0p4dks20vdle/generator-apigee-api-proxy5.gif?dl=1 "yo apigee-deploy-grunt-api")
 
 ## Features
 
