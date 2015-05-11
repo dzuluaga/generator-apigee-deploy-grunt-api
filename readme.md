@@ -20,9 +20,6 @@ Yeoman generator that scaffolds API Proxy based on [Apigee Deploy Grunt Plugin](
 
 - Install: `npm install -g generator-apigee-deploy-grunt-api`
 - Run: `yo apigee-deploy-grunt-api`
-@TODO
-- Run `grunt` for building and `grunt serve` for preview[\*](#grunt-serve-note). `--allow-remote` option for remote access.
-
 
 #### Grunt Serve Note
 

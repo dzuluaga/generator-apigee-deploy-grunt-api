@@ -7,7 +7,6 @@ var chalk = require('chalk');
 module.exports = yeoman.generators.Base.extend({
   constructor: function() {
     yeoman.generators.Base.apply(this, arguments);
-
     this.pkg = require('../package.json');
   },
 
@@ -54,7 +53,6 @@ module.exports = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function(answers) {
       this.apiname = this._.slugify(answers.apiname);
-      console.log(this.apiname)
       this.orgname = answers.orgname;
       this.mgmtapiurl = answers.mgmtapiurl;
       this.basepath = answers.basepath;
@@ -68,11 +66,19 @@ module.exports = yeoman.generators.Base.extend({
   */
 
   apiProxy: function() {
-    this.bulkDirectory('apiproxy', 'apiproxy');
+    this.bulkDirectory('apiproxy/policies', 'apiproxy/policies');
+    //this.bulkDirectory('apiproxy/proxies', 'apiproxy/proxies');
+    this.bulkDirectory('apiproxy/resources', 'apiproxy/resources');
+    this.bulkDirectory('apiproxy/targets', 'apiproxy/targets');
+    this.copy('apiproxy/forecastweather-grunt-plugin-api.xml', 'apiproxy/' + this.apiname + '.xml');
+    //this.copy('apiproxy/forecastweather-grunt-plugin-api.xml', 'apiproxy/forecastweather-grunt-plugin-api.xml');
   },
 
   grunt: function() {
-    this.bulkDirectory('grunt', 'grunt');
+    this.bulkDirectory('grunt/conf', 'grunt/conf');
+    this.bulkDirectory('grunt/lib', 'grunt/lib');
+    this.bulkDirectory('grunt/tasks', 'grunt/tasks');
+    this.copy('grunt/search-and-replace-files.js', 'grunt/search-and-replace-files.js');
   },
 
   node: function() {
@@ -127,7 +133,6 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
   },
-
   install: function() {
     this.npmInstall();
   }
