@@ -1,8 +1,8 @@
 /*jslint node: true */
 
 var common = {
-		url : "https://testmyapi-test.apigee.net/weathergrunt/apigee/forecastrss",
-		url_node : "https://testmyapi-test.apigee.net/weathergrunt/forecastweather_node"
+		url : "https://<%= orgname %>-test.apigee.net/<%= basepath %>/apigee/forecastrss",
+		url_node : "https://<%= orgname %>-test.apigee.net/<%= basepath %>/forecastweather_node"
 }
 
 exports.simpleWeatherArray = function(){

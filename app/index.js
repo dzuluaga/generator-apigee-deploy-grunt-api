@@ -86,7 +86,23 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   tests: function() {
-    this.bulkDirectory('tests', 'tests');
+    this.copy('tests/forecastweather-grunt-plugin-api.js', 'tests/' + this.apiname + '.js');
+    this.fs.copyTpl(
+      this.templatePath('tests/forecastweather-grunt-plugin-api-test-data.js'),
+      this.destinationPath('tests/' + this.apiname + '-test-data.js'), {
+        orgname: this.orgname,
+        basepath : this.basepath,
+      }
+    );
+    this.fs.copyTpl(
+      this.templatePath('tests/forecastweather-grunt-plugin-api-prod-data.js'),
+      this.destinationPath('tests/' + this.apiname + '-prod-data.js'), {
+        orgname: this.orgname,
+        basepath : this.basepath,
+      }
+    );
+    //this.copy('tests/forecastweather-grunt-plugin-api-test-data.js', 'test/' + this.apiname + '-test-data.js');
+    //this.copy('tests/forecastweather-grunt-plugin-api-prod-data.js', 'test/' + this.apiname + '-prod-data.js');
   },
 
   config: function() {
