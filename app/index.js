@@ -149,6 +149,16 @@ module.exports = yeoman.generators.Base.extend({
       }
     );
   },
+
+  copyReadme: function() {
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'), {
+        apiname: this.apiname,
+      }
+    );
+  },
+
   install: function() {
     this.npmInstall();
   }
