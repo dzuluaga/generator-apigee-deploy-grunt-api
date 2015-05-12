@@ -1,6 +1,6 @@
 {
   "name": "generator-apigee-deploy-grunt-api",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Scaffold out an Apigee Node.js API",
   "license": "BSD",
   "repository": "https://github.com/dzuluaga/generator-apigee-deploy-grunt-api.git",

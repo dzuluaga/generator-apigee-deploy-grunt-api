@@ -22,6 +22,13 @@ Describe the verb applied to the resource. @TODO
 | {param_c}     | date          | {sample_value}|
 
 
+## Deploy this api proxy
+You can deploy <%= apiname %> by calling this command.
+```bash
+grunt --env={env} --upload-modules --username={username} --password={password}
+```
+For additional instructions on other parameter, please check [Apigee Deploy Grunt Plugin Git Repo](https://github.com/apigeecs/apigee-deploy-grunt-plugin).
+
 ##Contributing
 
 If you would like to contribute, simply fork the repository, push your changes to a branch and send a pull request:
