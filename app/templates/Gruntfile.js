@@ -151,6 +151,9 @@ module.exports = function(grunt) {
 /*	        "run_jmeter_tests" : {
 	             command: 'mvn install -P <%= grunt.option("env") %>',
 	        },*/
+          apigee_npm_node_modules : {
+               command: "npm install --prefix './node'",
+          },
 	    },
 	    notify: {
 	    	task_name: {
@@ -213,7 +216,7 @@ require('load-grunt-tasks')(grunt);
 // importKVM at Organization and Environment level. See apigee_kvm task above
 grunt.registerTask('importKVMs', ['apigee_kvm:' + grunt.config.get("apigee_profiles")[grunt.option('env')].org + '-' + grunt.option("env"), 'apigee_kvm:' + grunt.config.get("apigee_profiles")[grunt.option('env')].org]);
 
-grunt.registerTask('buildApiBundle', 'Build zip without importing it to Edge', ['apigeeGruntPluginBanner', 'prompt', 'clean', 'saveGitRevision', 'mkdir','copy', 'xmlpoke', 'string-replace', 'jshint', 'eslint', 'complexity', /*'shell'*/ 'compressAlias']);
+grunt.registerTask('buildApiBundle', 'Build zip without importing it to Edge', ['apigeeGruntPluginBanner', 'prompt', 'clean', 'saveGitRevision', 'shell:apigee_npm_node_modules', 'mkdir','copy', 'xmlpoke', 'string-replace', 'jshint', 'eslint', 'complexity', /*'shell'*/ 'compressAlias']);
   //1. import revision bumping revision id
   grunt.registerTask('IMPORT_DEPLOY_BUMP_REVISION', [ 'buildApiBundle', 'getDeployedApiRevisions', 'undeployApiRevision',
     'apigee_import_api_bundle', 'installNpmRevisionAlias', 'deployApiRevisionAlias', 'executeTests', /*'shell:run_jmeter_tests',*/ 'notify:ApiDeployed']);
