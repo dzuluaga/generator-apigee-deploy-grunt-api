@@ -1,6 +1,6 @@
 {
   "name": "generator-apigee-deploy-grunt-api",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Scaffold out an Apigee Node.js API",
   "license": "BSD",
   "repository": "https://github.com/dzuluaga/generator-apigee-deploy-grunt-api.git",
@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
+    "npm": "^6.4.0",
     "yeoman-generator": "^0.18.9",
     "yosay": "^1.0.3"
   },
